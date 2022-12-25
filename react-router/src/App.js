@@ -3,6 +3,8 @@ import Home from "./components/Home";
 import About from "./components/About";
 import NavBar from "./components/Navbar";
 import Error from "./components/Error";
+import User from "./components/User";
+
 import "./App.css";
 
 const App = () => {
@@ -14,8 +16,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
-          {/* /about route is depracted. but we will keep this as redirection */}
           <Route path="/about" element={<Navigate to="/about-us" />} />
+          <Route path="/users/:name" element={<User />} />
 
           <Route path="/*" element={<Error />} />
         </Routes>
