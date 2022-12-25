@@ -1,14 +1,34 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <>
-      <ul>
+      <ul className="navbar">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            className="text-red-500"
+            to="/"
+            style={({ isActive }) => {
+              return {
+                backgroundColor: isActive ? "red" : "green",
+              };
+            }}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/about-us">About</Link>
+          <NavLink
+            className="text-red-500"
+            to="/about-us"
+            style={({ isActive }) => {
+              return {
+                backgroundColor: isActive ? "red" : "green",
+              };
+            }}
+          >
+            About
+          </NavLink>
         </li>
       </ul>
     </>
