@@ -4,6 +4,7 @@ import About from "./components/About";
 import NavBar from "./components/Navbar";
 import Error from "./components/Error";
 import User from "./components/User";
+import Filter from "./components/Filter";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/about" element={<Navigate to="/about-us" />} />
+          <Route path="/filter" element={<Filter />} />
           <Route path="/users/:name" element={<User />} />
 
           <Route path="/*" element={<Error />} />

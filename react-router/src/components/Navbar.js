@@ -30,6 +30,19 @@ const NavBar = () => {
             About
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            className="text-red-500"
+            to="/filter"
+            style={({ isActive }) => {
+              return {
+                backgroundColor: isActive ? "red" : "green",
+              };
+            }}
+          >
+            Filter
+          </NavLink>
+        </li>
       </ul>
     </>
   );
